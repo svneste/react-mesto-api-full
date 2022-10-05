@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const routerUsers = require('./routes/users');
 const routerCards = require('./routes/cards');
+const cors = require('./middlewares/cors');
 const routerNotFound = require('./middlewares/error-not-found');
 const auth = require('./middlewares/auth');
 const {
@@ -22,11 +23,9 @@ const {
 const app = express();
 app.use(bodyParser.json());
 
-app.use(requestLogger);
+app.use(cors);
 
-app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', "*");
-})
+app.use(requestLogger);
 
 app.post('/signin', validationLoginUser, login);
 app.post('/signup', validationCreateUser, createUser);
