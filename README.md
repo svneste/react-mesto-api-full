@@ -10,7 +10,7 @@
 
 ## Доступ к проекту:
 
-  IP 84.252.138.118 \
-  backend https://api.facebook.nomoredomains.icu \
-  frontend https://facebook.nomoredomains.icu \
+  Адрес сервера (IP): 84.252.138.118 \
+  backend: https://api.facebook.nomoredomains.icu \
+  frontend: https://facebook.nomoredomains.icu
 
