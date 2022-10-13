@@ -88,7 +88,7 @@ const refreshAvatar = (req, res, next) => {
   User.findByIdAndUpdate(
     req.user._id,
     { avatar },
-    { new: true, runValidators: true },
+    { new: true },
   )
     .then((user) => res.send(user))
     .catch((err) => {
