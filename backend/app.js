@@ -2,14 +2,14 @@ require('dotenv').config();
 
 const express = require('express');
 
-const { PORT = 3001 } = process.env;
+const { PORT = 3000 } = process.env;
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const routerUsers = require('./routes/users');
 const routerCards = require('./routes/cards');
-const cors = require('cors');
 const routerNotFound = require('./middlewares/error-not-found');
 const auth = require('./middlewares/auth');
 const {
